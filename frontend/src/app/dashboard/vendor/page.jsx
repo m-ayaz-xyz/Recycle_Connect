@@ -17,7 +17,21 @@ import LoadingScreen from "@/components/ui/LoadingScreen";
 import Link from "next/link";
 import OrderDetails from "@/components/ui/OrderDetail";
 import VendorLocationModal from "@/components/ui/VendorLocationModal";
-import VendorMap from "@/components/ui/VendorMap";
+// import VendorMap from "@/components/ui/VendorMap";
+
+import dynamic from "next/dynamic";
+
+const VendorMap = dynamic(
+  () => import("@/components/ui/VendorMap"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex items-center justify-center h-full">
+        Loading Map...
+      </div>
+    ),
+  }
+);
 
 const page = () => {
   const router = useRouter();
