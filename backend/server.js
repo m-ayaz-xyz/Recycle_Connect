@@ -8,7 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const dashboardRoutes = require("./routes/dashboardRoute");
 
 const app = express();
-const FrontendURL = process.env.FRONTEND_URL || "http://localhost:3000";
+// const FrontendURL = process.env.FRONTEND_URL || "http://localhost:3000";
 
 connectDB();
 
@@ -16,12 +16,13 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: FrontendURL,
-    credentials: true,
-  }),
-);
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://recycle-connect.vercel.app"
+  ],
+  credentials: true,
+}));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/dashboard", dashboardRoutes);
