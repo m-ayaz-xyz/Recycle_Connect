@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const dashboardRoutes = require("./routes/dashboardRoute");
 
 const app = express();
+const FrontendURL = process.env.FRONTEND_URL || "http://localhost:3000";
 
 connectDB();
 
@@ -17,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: FrontendURL,
     credentials: true,
   }),
 );
