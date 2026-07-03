@@ -1,3 +1,9 @@
+/**
+ * RecycleConnect
+ * Copyright © 2026 Mohammad Ayaz.
+ * All rights reserved.
+ */
+
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";

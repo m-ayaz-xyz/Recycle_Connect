@@ -51,17 +51,17 @@ export default function Navbar({ userName, email, role }) {
           </Link>
 
           <Link
-            href="#tips"
+            href="/#tips"
             className="text-sm font-medium text-gray-500 hover:text-green-600"
           >
             Recycling Tips
           </Link>
 
           <Link
-            href="#"
+            href="/about"
             className="text-sm font-medium text-gray-500 hover:text-green-600"
           >
-            Support
+            About
           </Link>
 
           {userName && (
@@ -167,15 +167,19 @@ function DropdownContent({
       </div>
 
       <div className="flex justify-center gap-3 mt-5 text-xs">
-        <span className="text-blue-500 cursor-pointer hover:underline">
+        {/* <span className="text-blue-500 cursor-pointer hover:underline"> */}
+          <Link href="/privacy-policy" className="text-blue-500 cursor-pointer hover:underline" rel="stylesheet">
           Privacy Policy
-        </span>
+          </Link>
+        {/* </span> */}
 
         <span>•</span>
 
-        <span className="text-blue-500 cursor-pointer hover:underline">
+        {/* <span className="text-blue-500 cursor-pointer hover:underline"> */}
+          <Link href="/terms-of-service" className="text-blue-500 cursor-pointer hover:underline" rel="stylesheet">
           Terms of Service
-        </span>
+          </Link>
+        {/* </span> */}
       </div>
 
     </div>

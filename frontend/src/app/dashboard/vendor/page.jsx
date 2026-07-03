@@ -64,7 +64,7 @@ const page = () => {
 
         const orderRes = await api.get("/dashboard/vendor/orders");
         setOrderData(orderRes.data);
-        console.log("Order Data:", orderRes.data);
+        // console.log("Order Data:", orderRes.data);
 
         if (res.data.role !== "vendor") {
           router.push("/dashboard/user");
@@ -103,13 +103,17 @@ const page = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar userName={vendorDetails?.username} email={profileData?.email} />
 
-      <div className="flex h-[calc(100vh-64px)]">
+      {/* <div className="flex h-[calc(100vh-64px)]"> */}
+      <div className="flex flex-col lg:flex-row min-h-[calc(100vh-64px)]">
         {/* Left: Vendor Info */}
-        <div className="flex-1 overflow-y-auto">
-          <div className="max-w-2xl mx-auto px-8 py-8">
+        {/* <div className="flex-1 overflow-y-auto"> */}
+        <div className="flex-1 overflow-y-auto order-2 lg:order-1">
+          {/* <div className="max-w-2xl mx-auto px-8 py-8"> */}
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             {/* Vendor info */}
             <div className="mb-6">
-              <div className="flex items-center justify-between mb-1">
+              {/* <div className="flex items-center justify-between mb-1"> */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1">
                 <h1
                   className="text-2xl font-black text-gray-900 mb-1"
                   style={{ fontFamily: "'Playfair Display', serif" }}
@@ -154,6 +158,13 @@ const page = () => {
                   </div>
                 ))}
               </div>
+              <button
+              onClick={() => setShowLocationPopup(true)}
+              // className="bg-green-500 text-white px-5 py-2 rounded-xl"
+              className="w-full sm:w-auto bg-green-500 text-white px-5 py-2 mt-4 rounded-xl"
+            >
+              Update Location
+            </button>
             </div>
 
             {/* Price selector */}
@@ -197,17 +208,13 @@ const page = () => {
                 setShowLocationPopup(false);
               }}
             />
-            <button
-              onClick={() => setShowLocationPopup(true)}
-              className="bg-green-500 text-white px-5 py-2 rounded-xl"
-            >
-              Update Location
-            </button>
+            
           </div>
         </div>
 
         {/* Right: Map */}
-        <div className="w-96 flex flex-col border-l border-green-100">
+        {/* <div className="w-96 flex flex-col border-l border-green-100"> */}
+        <div className="w-full h-[300px] lg:h-auto lg:w-96 border-t lg:border-t-0 lg:border-l border-green-100 order-1 lg:order-2">
           {/* <div className="flex-1">
           </div> */}
           {/* <MapView vendors={[vendor]} city={vendor.city} /> */}

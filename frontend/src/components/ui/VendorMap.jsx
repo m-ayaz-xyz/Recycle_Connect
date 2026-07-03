@@ -31,7 +31,7 @@ export default function VendorMap({ vendor }) {
         vendor.shopLocation.longitude,
       ]}
       zoom={16}
-      className="w-full h-full"
+      className="w-full h-full z-0"
       scrollWheelZoom
     >
       <TileLayer

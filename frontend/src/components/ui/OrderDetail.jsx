@@ -4,7 +4,7 @@ export default function OrderDetails({ order }) {
   if (!order) {
     return <p className="text-gray-500">No order data available</p>;
   }
-  console.log(order);
+  // console.log(order);
   return (
     <div className="bg-white mb-3 rounded-2xl shadow-sm border border-gray-200 p-6">
       <h2 className="text-xl font-bold mb-6">Order Details</h2>
