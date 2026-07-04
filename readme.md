@@ -9,7 +9,7 @@ A modern full-stack web application that demonstrates how users can connect with
 
 ## Live Demo
 
-🔗 https://your-project.vercel.app
+🔗 https://recycle-connect.vercel.app/
 
 > **Note:** This is a demonstration deployment created for portfolio purposes. It is not intended to be used as a production service.
 
