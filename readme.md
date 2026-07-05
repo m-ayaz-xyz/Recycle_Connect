@@ -7,9 +7,11 @@ A modern full-stack web application that demonstrates how users can connect with
 
 ---
 
-## Live Demo
+## Links
 
-🔗 https://recycle-connect.vercel.app/
+Live Demo 🔗 https://recycle-connect.vercel.app/
+
+Figma Design: https://www.figma.com/design/ffpJg60jcuiUL0n8KtrGuG/Recycle_connect?node-id=0-1&p=f
 
 > **Note:** This is a demonstration deployment created for portfolio purposes. It is not intended to be used as a production service.
 
