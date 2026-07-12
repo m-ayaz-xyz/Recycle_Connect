@@ -13,6 +13,8 @@ Live Demo 🔗 https://recycle-connect.vercel.app/
 
 Figma Design: https://www.figma.com/design/ffpJg60jcuiUL0n8KtrGuG/Recycle_connect?node-id=0-1&p=f
 
+Project Details: https://mohammad-ayaz.vercel.app/blog/recycleconnect
+
 > **Note:** This is a demonstration deployment created for portfolio purposes. It is not intended to be used as a production service.
 
 ---
